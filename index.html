@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Malak Nawel 💖</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ffc0cb, #ff9eb5);
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+    }
+
+    .card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        max-width: 350px;
+    }
+
+    h1 {
+        color: #ff4d6d;
+    }
+
+    .buttons {
+        margin-top: 25px;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .yes {
+        background: #ff4d6d;
+        color: white;
+        margin-right: 10px;
+    }
+
+    .no {
+        background: #ddd;
+        position: absolute;
+    }
+
+    .hidden-message {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #ff4d6d;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Malak Nawel 💕</h1>
+    <p>Will you be my Valentine?</p>
+
+    <div class="buttons">
+        <button class="yes" onclick="sayYes()">Yes 💖</button>
+        <button class="no" onmouseover="moveButton()" id="noBtn">No 😅</button>
+    </div>
+
+    <div class="hidden-message" id="message">
+        You just made me the happiest man alive 🥰💘
+    </div>
+</div>
+
+<script>
+function moveButton() {
+    const button = document.getElementById("noBtn");
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    button.style.left = x + "px";
+    button.style.top = y + "px";
+}
+
+function sayYes() {
+    document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
